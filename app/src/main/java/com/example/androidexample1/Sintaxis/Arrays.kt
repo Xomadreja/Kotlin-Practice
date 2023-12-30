@@ -1,5 +1,7 @@
 package com.example.androidexample1.Sintaxis
-
+/**
+ * Arrays
+ * */
 fun main(){
     val semana = arrayOf("lun", "mar","mier","jue","vie","sab", "dom")
     for (elemento in semana){
