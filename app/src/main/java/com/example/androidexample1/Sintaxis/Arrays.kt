@@ -1,6 +1,6 @@
 package com.example.androidexample1.Sintaxis
 /**
- * Arrays
+ * Ejemplos de Arrays
  * */
 fun main(){
     val semana = arrayOf("lun", "mar","mier","jue","vie","sab", "dom")
