@@ -6,14 +6,14 @@ package com.example.androidexample1.exercises
  * La cantidad exacta de notificaciones cuando haya menos de 100
  * 99+ como cantidad de notificaciones cuando haya 100 o más
  *
- * Examples of Android
+ * Examples of Android pgina Web
  * */
 fun main() {
-    val morningNotification = 51
-    val eveningNotification = 135
+    val MorningNotification = 51
+    val EveningNotification = 135
 
-    //printNotificationSummary(morningNotification)
-    printNotificationSummary(eveningNotification)
+    //printNotificationSummary(MorningNotification)
+    printNotificationSummary(EveningNotification)
 }
 
 fun printNotificationSummary(numberOfMessages: Int) {
@@ -21,4 +21,4 @@ fun printNotificationSummary(numberOfMessages: Int) {
     else println("Your phone is blowing up! You have 99+ notifications.")
 }
 
-/***Ejercicio resuelto***/
+/***Ejercicio resuelto YEY***/
