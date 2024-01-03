@@ -21,4 +21,4 @@ fun printNotificationSummary(numberOfMessages: Int) {
     else println("Your phone is blowing up! You have 99+ notifications.")
 }
 
-// ejercicio resuelto
+/***Ejercicio resuelto***/
