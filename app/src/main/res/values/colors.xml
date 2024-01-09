@@ -7,4 +7,14 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="background_component">#F2CCC3</color>
+    <color name="background_component_selected">#E78F8E</color>
+    <color name="background_app">#FFE6E8</color>
+    <color name="background_button">#F48498</color>
+    <color name="title_text">#FFFFFF</color>
+    <color name="underWeight">#FFEB3B</color>
+    <color name="normalWeight">#4CAF50</color>
+    <color name="overWeight">#D68308</color>
+    <color name="obesity">#FF0000</color>
 </resources>
