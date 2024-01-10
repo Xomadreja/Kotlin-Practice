@@ -23,4 +23,11 @@
     <string name="description_obesity">Estas muy por encima de lo optimo para tu peso y altura</string>
     <string name="toDoApp">Bienvenida Aylin :)</string>
     <string name="toDoCateegories">Categorias</string>
+    <string name="toDoTasks">Tareas</string>
+    <string name="todo_busness">Negocios</string>
+    <string name="addNewTask">Añade la tarea</string>
+    <string name="todo_personal">Personal</string>
+    <string name="todo_work">Trabajo</string>
+    <string name="todoOther">Otro</string>
+    <string name="createTask">Crear Tarea</string>
 </resources>
