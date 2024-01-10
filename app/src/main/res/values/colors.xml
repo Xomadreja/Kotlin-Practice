@@ -7,7 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
+<!--IMC App-->
     <color name="background_component">#F2CCC3</color>
     <color name="background_component_selected">#E78F8E</color>
     <color name="background_app">#FFE6E8</color>
@@ -17,4 +17,15 @@
     <color name="normalWeight">#4CAF50</color>
     <color name="overWeight">#D68308</color>
     <color name="obesity">#FF0000</color>
+
+<!--ToDo App-->
+    <color name="todo_background_card">#FF081A4A</color>
+    <color name="todo_background_disabled">#787878</color>
+    <color name="todo_background_todo_app">#FF2D4993</color>
+    <color name="todo_subtitle_text">#959595</color>
+    <color name="todo_accent">#E91E63</color>
+
+    <color name="todo_business_category">#FF9800</color>
+    <color name="todo_personal_category">#00BCD4</color>
+    <color name="todo_other_category">#4CAF50</color>
 </resources>

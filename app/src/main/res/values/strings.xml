@@ -21,4 +21,6 @@
     <string name="description_overWeight">Estas por encima de lo optimo para tu peso y altura</string>
     <string name="title_obesity">Obesidad</string>
     <string name="description_obesity">Estas muy por encima de lo optimo para tu peso y altura</string>
+    <string name="toDoApp">Bienvenida Aylin :)</string>
+    <string name="toDoCateegories">Categorias</string>
 </resources>
