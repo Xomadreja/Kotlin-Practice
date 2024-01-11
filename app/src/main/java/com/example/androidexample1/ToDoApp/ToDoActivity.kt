@@ -18,16 +18,17 @@ class ToDoActivity : AppCompatActivity() {
     private val categories = listOf(
         TaskCategory.Personal,
         TaskCategory.Busness,
-        TaskCategory. Work,
-        TaskCategory.Other)
+        TaskCategory.Work,
+        TaskCategory.Other
+    )
 
     private val tasks = mutableListOf(
-        Task("aaaaaaaa",TaskCategory.Work),
-        Task("bbbbbbbb",TaskCategory.Work),
-        Task("cccccccc",TaskCategory.Personal),
-        Task("dddddddd",TaskCategory.Personal),
-        Task("eeeeeeee",TaskCategory.Other),
-        Task("ffffffff",TaskCategory.Busness)
+        Task("aaaaaaaa", TaskCategory.Work),
+        Task("bbbbbbbb", TaskCategory.Work),
+        Task("cccccccc", TaskCategory.Personal),
+        Task("dddddddd", TaskCategory.Personal),
+        Task("eeeeeeee", TaskCategory.Other),
+        Task("ffffffff", TaskCategory.Busness)
     )
     private lateinit var rsCategories: RecyclerView
     private lateinit var categoriesAdapter: CategoriesAdapter
@@ -52,22 +53,25 @@ class ToDoActivity : AppCompatActivity() {
         val dialog = Dialog(this)
         dialog.setContentView(R.layout.dialog_new_task)
 
-        val etAddTask:EditText = dialog.findViewById(R.id.etAddTask)
-        val btnCreateTask:Button = dialog.findViewById(R.id.btnCreateTask)
-        val rgCategories:RadioGroup=dialog.findViewById(R.id.rgCategories)
+        val etAddTask: EditText = dialog.findViewById(R.id.etAddTask)
+        val btnCreateTask: Button = dialog.findViewById(R.id.btnCreateTask)
+        val rgCategories: RadioGroup = dialog.findViewById(R.id.rgCategories)
 
-        btnCreateTask.setOnClickListener{
-            val newTaskToAdd=etAddTask.text.toString()
-            if(newTaskToAdd.isNotEmpty()){
-                val selectedId=rgCategories.checkedRadioButtonId
-                val rgButton:RadioButton=dialog.findViewById(selectedId)
-                val taskCategoryNewTask:TaskCategory = when(rgButton.text){
-                    getString(R.string.todo_personal)->TaskCategory.Personal
-                    getString(R.string.todo_busness)->TaskCategory.Personal
-                    getString(R.string.todo_work)->TaskCategory.Personal
-                    else -> {TaskCategory.Other}
+        btnCreateTask.setOnClickListener {
+            val newTaskToAdd = etAddTask.text.toString()
+            if (newTaskToAdd.isNotEmpty()) {
+                val selectedId = rgCategories.checkedRadioButtonId
+                val rgButton: RadioButton = dialog.findViewById(selectedId)
+                rgButton.text
+                val taskCategoryNewTask: TaskCategory = when (rgButton.text) {
+                    getString(R.string.todo_personal) -> TaskCategory.Personal
+                    getString(R.string.todo_busness) -> TaskCategory.Busness
+                    getString(R.string.todo_work) -> TaskCategory.Work
+                    else -> {
+                        TaskCategory.Other
+                    }
                 }
-                tasks.add(Task(newTaskToAdd,taskCategoryNewTask))
+                tasks.add(Task(newTaskToAdd, taskCategoryNewTask))
                 updateTasks()
                 dialog.hide()
             }
@@ -76,22 +80,44 @@ class ToDoActivity : AppCompatActivity() {
         dialog.show()
     }
 
-    private fun updateTasks() {
-        taskAdapter.notifyDataSetChanged()
+
+    private fun initComponent() {
+        rsCategories = findViewById(R.id.rsCategories)
+        rsTasks = findViewById(R.id.rsTasks)
+        fabNewTask = findViewById(R.id.fabNewTask)
     }
 
     private fun initUI() {
-        categoriesAdapter= CategoriesAdapter(categories)
-        rsCategories.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-        rsCategories.adapter=categoriesAdapter
-        taskAdapter= TaskAdapter(tasks)
-        rsTasks.layoutManager=LinearLayoutManager(this)
-        rsTasks.adapter=taskAdapter
+        categoriesAdapter =
+            CategoriesAdapter(categories) { position -> onCategorySelected(position) }
+        rsCategories.layoutManager =
+            LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        rsCategories.adapter = categoriesAdapter
+        taskAdapter = TaskAdapter(tasks) { position -> onItemSelected(position) }
+        rsTasks.layoutManager = LinearLayoutManager(this)
+        rsTasks.adapter = taskAdapter
     }
 
-    private fun initComponent() {
-        rsCategories=findViewById(R.id.rsCategories)
-        rsTasks=findViewById(R.id.rsTasks)
-        fabNewTask=findViewById(R.id.fabNewTask)
+    private fun onCategorySelected(position: Int) {
+        categories[position].isSelected = !categories[position].isSelected
+        categoriesAdapter.notifyItemChanged(position)
+        updateTasks()
+    }
+
+    private fun onItemSelected(position: Int) {
+        tasks[position].isSelecte = !tasks[position].isSelecte
+        updateTasks()
+    }
+
+    private fun updateTasks() {
+        val selectedCategories = categories.filter { it.isSelected }
+        lateinit var  newTask:List<Task>
+        if (selectedCategories.size == 0) {
+            newTask = tasks
+        } else {
+            newTask = tasks.filter { selectedCategories.contains(it.category) }
+        }
+        taskAdapter.tasks = newTask
+        taskAdapter.notifyDataSetChanged()
     }
 }

@@ -1,8 +1,8 @@
 package com.example.androidexample1.ToDoApp
 
-import android.view.TextureView
 import android.view.View
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.androidexample1.R
@@ -10,7 +10,17 @@ import com.example.androidexample1.R
 class CategoriesViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val tvCategoryName: TextView = view.findViewById(R.id.tvCategoryName)
     private val vCategoryBar: View = view.findViewById(R.id.vCategoryBar)
-    fun render(taskCategory: TaskCategory) {
+    private val viewItemCategory: CardView = view.findViewById(R.id.viewItemCategory)
+    fun render(taskCategory: TaskCategory, onCategorySelected: (Int) -> Unit) {
+        itemView.setOnClickListener{onCategorySelected(layoutPosition)}
+        var color = if (taskCategory.isSelected){
+            R.color.todo_background_disabled
+        }
+        else{
+            R.color.todo_background_card
+        }
+        viewItemCategory.setCardBackgroundColor(ContextCompat.getColor(viewItemCategory.context,color))
+
         when (taskCategory) {
             TaskCategory.Busness -> {
                 tvCategoryName.text = "Negocios"
