@@ -18,7 +18,7 @@
     <color name="overWeight">#D68308</color>
     <color name="obesity">#FF0000</color>
 
-<!--ToDo App-->
+<!--ToDoApp-->
     <color name="todo_background_card">#FF081A4A</color>
     <color name="todo_background_disabled">#787878</color>
     <color name="todo_background_todo_app">#FF2D4993</color>
@@ -28,4 +28,7 @@
     <color name="todo_business_category">#FF9800</color>
     <color name="todo_personal_category">#00BCD4</color>
     <color name="todo_other_category">#4CAF50</color>
+
+<!--SuperHeroeApp-->
+    <color name="sh_card_title">#8C3F51B5</color>
 </resources>

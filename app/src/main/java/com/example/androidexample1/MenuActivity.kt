@@ -8,6 +8,7 @@ import com.example.androidexample1.FirstApp.FirstActivity
 import com.example.androidexample1.FirstApp.ResultActivity
 import com.example.androidexample1.ImcAppCalculator.ImcCalculatorActivity
 import com.example.androidexample1.ToDoApp.ToDoActivity
+import com.example.androidexample1.superHeroApp.superHeroListActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +20,15 @@ class MenuActivity : AppCompatActivity() {
         btnImcApp.setOnClickListener {navigateToImcApp()  }
         val btnToDo = findViewById<Button>(R.id.btnToDo)
         btnToDo.setOnClickListener {navigateToDo()  }
+        val btnSuperHeroe = findViewById<Button>(R.id.btnsuperHero)
+        btnSuperHeroe.setOnClickListener {navigateSuperHeroe()  }
     }
+
+    private fun navigateSuperHeroe() {
+        val intent = Intent(this, superHeroListActivity::class.java)
+        startActivity(intent)
+    }
+
     fun navigateToDo() {
         val intent = Intent(this, ToDoActivity::class.java)
         startActivity(intent)
