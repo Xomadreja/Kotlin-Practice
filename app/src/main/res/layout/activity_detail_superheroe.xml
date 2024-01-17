@@ -6,4 +6,197 @@
     android:layout_height="match_parent"
     tools:context=".superHeroApp.DetailSuperheroeActivity">
 
+    <ImageView
+        android:id="@+id/imDetailSuperheroeImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginBottom="-30dp"
+        android:elevation="8dp"
+        app:cardBackgroundColor="@color/sh_card_background"
+        app:cardCornerRadius="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/tvSuperheroeNameD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:gravity="center"
+                tools:text="Aylin"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@id/tvSuperheroeFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="Aylin"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+            <TextView
+                android:id="@id/tvPublisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="Aylin"
+                android:textColor="@color/black"
+                android:textSize="32sp" />
+            <TextView
+                android:id="@id/tvSuperheroeAlignment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                tools:text="Aylin"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="32sp"
+                android:textAllCaps="true"/>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="16dp"
+                android:orientation="horizontal"
+                android:gravity="bottom"
+                android:background="@color/sh_card_title">
+
+                <View
+                    android:id="@+id/vStatIntelligence"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/sh_stat_intelligence"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"/>
+                <View
+                    android:id="@+id/vStatStrength"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/sh_stat_strength"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"/>
+                <View
+                    android:id="@+id/vStatSpeed"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/sh_stat_speed"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"/>
+                <View
+                    android:id="@+id/vStatDurability"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/sh_stat_durability"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"/>
+                <View
+                    android:id="@+id/vStatPower"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/sh_stat_power"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"/>
+                <View
+                    android:id="@+id/vStatCombat"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/sh_stat_combat"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="4dp"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginHorizontal="16dp"
+            android:orientation="horizontal"
+            android:background="@color/sh_card_title">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Intelligence"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Strength"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Speed"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Durability"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Power"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:text="Combat"
+                android:maxLines="1"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

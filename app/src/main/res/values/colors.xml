@@ -31,4 +31,12 @@
 
 <!--SuperHeroeApp-->
     <color name="sh_card_title">#8C3F51B5</color>
+    <color name="sh_card_background">#00BCD4</color>
+
+    <color name="sh_stat_intelligence">#6C5A49</color>
+    <color name="sh_stat_strength">#C8AD55</color>
+    <color name="sh_stat_speed">#D0FCB3</color>
+    <color name="sh_stat_durability">#9BC59D</color>
+    <color name="sh_stat_power">#73BFB8</color>
+    <color name="sh_stat_combat">#FEC601</color>
 </resources>

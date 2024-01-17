@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvSuperheroeFullName" type="id" />
+    <item name="tvPublisher" type="id" />
+    <item name="tvSuperheroeAlignment" type="id" />
+    <item name="tvSuperheroeNameD" type="id" />
+</resources>
