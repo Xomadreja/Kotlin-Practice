@@ -25,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Modo Oscuro"
-                android:textColor="@color/black"/>
+                android:textColor="@color/settings_title"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Activar Bluetooth"
-                android:textColor="@color/black"/>
+                android:textColor="@color/settings_title"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -94,7 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Volumen"
-                android:textColor="@color/black"/>
+                android:textColor="@color/settings_title"/>
             <com.google.android.material.slider.RangeSlider
                 android:id="@+id/rsVolume"
                 android:valueFrom="0"
@@ -123,7 +123,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Vibrar en las llamadas"
-                android:textColor="@color/black"/>
+                android:textColor="@color/settings_title"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
         <androidx.appcompat.widget.SwitchCompat

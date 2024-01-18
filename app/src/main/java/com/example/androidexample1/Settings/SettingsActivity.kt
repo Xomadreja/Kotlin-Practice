@@ -43,11 +43,13 @@ class SettingsActivity : AppCompatActivity() {
         CoroutineScope(Dispatchers.IO).launch {
             getSettings().filter { firstTime }.collect { settingsModel ->
                 if (settingsModel != null) {
-                    binding.scDarkMode.isChecked = settingsModel.darkMode
-                    binding.scBluetooth.isChecked = settingsModel.bluetooth
-                    binding.scVibration.isChecked = settingsModel.vibration
-                    binding.rsVolume.setValues(settingsModel.volume.toFloat())
-                    firstTime = !firstTime
+                    runOnUiThread{
+                        binding.scDarkMode.isChecked = settingsModel.darkMode
+                        binding.scBluetooth.isChecked = settingsModel.bluetooth
+                        binding.scVibration.isChecked = settingsModel.vibration
+                        binding.rsVolume.setValues(settingsModel.volume.toFloat())
+                        firstTime = !firstTime
+                    }
                 }
             }
         }
